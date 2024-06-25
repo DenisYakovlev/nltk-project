@@ -17,7 +17,7 @@ Before you begin, ensure than you have the following installed:
 Clone the Repository  
 
 ```
-git clone https://github.com/DenisYakovlev/e-commerce-shop.git 
+git clone https://github.com/DenisYakovlev/nltk-project.git
 ```
 
 ### Enviroment variables
