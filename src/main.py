@@ -5,7 +5,7 @@ from fastapi import FastAPI
 
 from core import init_nltk, logger, settings
 from middlewares import LoggingMiddleware, ErrorHandlerMiddleware
-from routers import ping_router
+from routers import nltk_router
 
 
 @asynccontextmanager
@@ -28,7 +28,7 @@ app.add_middleware(LoggingMiddleware)
 app.add_middleware(ErrorHandlerMiddleware)
 
 # add routers here
-app.include_router(ping_router, prefix="")
+app.include_router(nltk_router, prefix="")
 
 if __name__ == "__main__":
     uvicorn.run(

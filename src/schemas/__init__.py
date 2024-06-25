@@ -1,1 +1,6 @@
-from schemas.ping import PingSchema
+from schemas.nltk import (
+    PosTagResponseSchema,
+    TextSchema,
+    TokenizeResponseSchema,
+    NerResponseSchema
+)

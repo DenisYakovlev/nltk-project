@@ -1,1 +1,1 @@
-from routers.ping import router as ping_router
+from routers.nltk import router as nltk_router
