@@ -5,7 +5,7 @@ from main import app
 client = TestClient(app)
 
 # Example input text for testing
-input_text = "This is a sample input text."
+input_text = "Hello, this is the basic test. London, Germany, Italy."
 
 
 def test_tokenize_endpoint():

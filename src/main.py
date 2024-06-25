@@ -12,13 +12,13 @@ from routers import nltk_router
 async def lifespan(app):
     # on startup
 
-    logger.info("Starting server...")
+    logger.info(f"Starting server on port {settings.PORT}...")
     init_nltk()
 
     yield
     # on shutdown
 
-    logger.info("Shuting down server...")
+    logger.info("Shutting down server...")
 
 
 app = FastAPI(lifespan=lifespan)
@@ -33,6 +33,7 @@ app.include_router(nltk_router, prefix="")
 if __name__ == "__main__":
     uvicorn.run(
         "main:app",
+        host="0.0.0.0",
         port=settings.PORT,
         log_config=settings.LOGGING_CONFIG,
         reload=settings.DEBUG,
