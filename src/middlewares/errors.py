@@ -16,4 +16,3 @@ class ErrorHandlerMiddleware(BaseHTTPMiddleware):
             )
         except Exception as e:
             raise e
-
